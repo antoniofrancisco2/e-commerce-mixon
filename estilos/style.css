@@ -20,6 +20,7 @@ body {
 /* Header */
 header {
     background-color: #ffad08;
+    height: 100%;
     color: white;
     padding: 20px 30px;
     display: flex;
@@ -105,9 +106,22 @@ nav ul li a:hover {
     vertical-align: middle;
 }
 
+.swiper {
+    width: 100%; /* O carrossel ocupa toda a largura do contêiner */
+    height: auto; /* Altura ajustada automaticamente */
+  }
+
+  .swiper-slide img {
+    width: 100%; /* As imagens se ajustam à largura do slide */
+    height: auto; /* Mantém a proporção original */
+    display: block; /* Evita gaps causados por elementos inline */
+    object-fit: cover; /* Corta o excesso, se necessário */
+  }
+
 /* Footer */
 footer {
     background-color: #1f1f2e;
+    height: 100%;
     color: white;
     padding: 20px 30px;
     display: flex;
