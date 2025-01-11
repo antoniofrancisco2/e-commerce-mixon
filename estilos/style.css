@@ -107,8 +107,8 @@ nav ul li a:hover {
 }
 
 .swiper {
-    width: 100%; /* O carrossel ocupa toda a largura do contêiner */
-    height: auto; /* Altura ajustada automaticamente */
+    width: 90%; /* O carrossel ocupa toda a largura do contêiner */
+    height: 100%; /* Altura ajustada automaticamente */
   }
 
   .swiper-slide img {
