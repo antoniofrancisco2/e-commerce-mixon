@@ -215,7 +215,8 @@ nav ul li:nth-child(6) {
     }
 
     nav > ul > li > a {
-        font-size: 0.9em;
+        padding-right: 10px;
+        font-size: 0.7em;
     }
 
     div#traco {
@@ -238,7 +239,6 @@ nav ul li:nth-child(6) {
     }
 
     nav ul {
-        flex-direction: column;
         align-items: center;
     }
 
@@ -248,12 +248,13 @@ nav ul li:nth-child(6) {
 
     .user-actions {
         display: flex;
-        flex-direction: column;
+
         align-items: center;
     }
 
     .user-actions a {
         margin: 10px 0;
+        padding: 10px;
         font-size: 1rem;
     }
 
