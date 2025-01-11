@@ -10,6 +10,22 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <style>
+      /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    
+    </style>
 </head>
 <body>
     <header>
@@ -18,19 +34,26 @@
         </div>
         <div class="search-bar">
             <input type="text" placeholder="O que você procura?" />
+
+            <nav class="navbar">
+              <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+                <ul class="menu" id="menu">
+                    <li><a href="/roupas">Roupas</a></li>
+                    <li><a href="/eletronicos">Eletrônicos</a></li>
+                    <li><a href="/beleza">Beleza e Cuidados</a></li>
+                    <li><a href="/esportes">Esportes e Lazer</a></li>
+                    <li><a href="/casa">Casa e Decoração</a></li>
+                    
+                    <li><a href="/ofertas">Ofertas</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="/roupas">Roupas</a></li>
-                <li><a href="/eletronicos">Eletrônicos</a></li>
-                <li><a href="/beleza">Beleza e Cuidados</a></li>
-                <li><a href="/esportes">Esportes e Lazer</a></li>
-                <!--<li><a href="/casa">Casa e Decoração</a></li>-->
-                
-                <!--<li><a href="/ofertas">Ofertas</a></li>-->
-            </ul>
-        </nav>
-        <div id="traco"></div>
+        
+
         <div class="user-actions">
             <a href="/cart"><i class="fas fa-shopping-cart"></i>Carrinho (0)</a>
             <a href="/login"><i class="fas fa-user"></i>Entrar</a>
@@ -86,6 +109,16 @@
     
 
       <script>
+
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('open');
+          menu.classList.toggle('open');
+        });
+
+
         const swiper = new Swiper('.swiper', {
           loop: true, // Faz o carrossel rodar em loop
           autoplay: {
