@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+:root {
+    --cor-1: #ffad08;
+    --cor-2: #edd75a;
+    --cor-3: #73b06f;
+    --cor-4: #0c8f8f;
+    --cor-5: #405059;
+    --cor-6: white;
+    --cor-7: black;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,7 +19,7 @@ body {
 
 /* Header */
 header {
-    background-color: #1f1f2e;
+    background-color: #ffad08;
     color: white;
     padding: 20px 30px;
     display: flex;
@@ -64,13 +74,13 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: var(--cor-7);
     font-size: 1.1rem;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ff7f50;
+    color: var(--cor-5);
 }
 
 .user-actions {
@@ -78,7 +88,7 @@ nav ul li a:hover {
 }
 
 .user-actions a {
-    color: white;
+    color: var(--cor-5);
     margin-left: 15px;
     font-size: 1rem;
     text-decoration: none;
@@ -86,7 +96,7 @@ nav ul li a:hover {
 }
 
 .user-actions a:hover {
-    color: #ff7f50;
+    color: var(--cor-4);
 }
 
 .user-actions i {
