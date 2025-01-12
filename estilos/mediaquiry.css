@@ -51,6 +51,34 @@
         width: 100%;
         height: 38px;
     }
+
+
+    .user-actions {
+        display: flex;
+        justify-content: center; /* Centraliza os links horizontalmente */
+        align-items: center; /* Alinha os itens verticalmente */
+        gap: 20px; /* Espaçamento entre os links */
+        margin: 0;
+        padding: 10px;
+    }
+    
+    .user-actions a {
+        text-decoration: none; /* Remove o sublinhado dos links */
+        color: #333; /* Cor do texto */
+        font-size: 16px; /* Tamanho da fonte */
+        display: flex; /* Flex para o ícone e texto no mesmo nível */
+        align-items: center; /* Centraliza o ícone verticalmente */
+    }
+    
+    .user-actions a i {
+        margin-right: 8px; /* Espaço entre o ícone e o texto */
+        font-size: 18px; /* Tamanho do ícone */
+        color: #666; /* Cor do ícone */
+    }
+    
+    .user-actions a:hover {
+        color: #007bff; /* Cor ao passar o mouse */
+    }
   }
 
   /* Responsividade */
@@ -124,12 +152,8 @@
         margin: 10px 0;
     }
 
-    div.user-actions {
-        display: flex;
-
-        padding: 0px 20px 0px 50px;
-        align-items: center;
-    }
+    
+    
 
     .user-actions i {
         font-size: 15px;
@@ -137,7 +161,6 @@
 
     div.user-actions a {
         margin: 10px 0;
-        padding: 10px;
         font-size: 0.9rem;
     }
 
