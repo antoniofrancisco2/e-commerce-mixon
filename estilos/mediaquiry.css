@@ -1,0 +1,165 @@
+/* Show menu on larger screens */
+@media (min-width: 768px) {
+    div.search-bar {
+        display: flex;
+        
+    }
+
+    .menu {
+      display: flex;
+      position: static;
+      transform: none;
+      flex-direction: row;
+      background-color: transparent;
+      width: auto;
+    }
+
+    .hamburger {
+      display: none;
+    }
+  }
+
+  /* Show hamburger only on mobile */
+  @media (max-width: 768px) {
+    div.search-bar {
+        flex-direction: row;
+        display: flex;
+        margin-left: 50px;
+    }
+
+    .hamburger {
+      display: flex;
+      margin-top: 0px;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .menu {
+        gap: 1rem;
+      }
+
+    .menu.open {
+      display: flex;
+    }
+
+    div.user-actions {
+        background-color: rgba(255, 255, 255, 0.329);
+        text-align: center;
+        padding-top: 10px;
+        width: 100%;
+        height: 38px;
+    }
+  }
+
+  /* Responsividade */
+ @media (max-width: 768px) {
+    header {
+        padding: 15px 0px 0px 0px;
+    }
+
+    .logo a {
+        font-size: 1.8rem;
+    }
+
+    .search-bar input {
+        width: 250px;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    div.user-actions a {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .company-info a {
+        margin-right: 10px;
+        font-size: 0.9rem;
+    }
+
+    .social-links a {
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    .payment-methods img {
+        width: 35px;
+    }
+
+    nav > ul > li > a {
+        padding-right: 10px;
+        font-size: 0.7em;
+    }
+}
+ 
+
+@media (max-width: 480px) {
+    .logo a {
+        font-size: 1.6rem;
+    }
+
+    .search-bar input {
+        width: 200px;
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    div.user-actions {
+        display: flex;
+        padding-left: 5px;
+        align-items: center;
+    }
+
+    .user-actions i {
+        font-size: 15px;
+    }
+
+    div#sepr {
+        padding-left: 55px;
+    }
+
+    div#sepr a {
+        padding: 5px;
+    }
+
+    div.user-actions a {
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .company-info a,
+    .social-links a {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    .payment-methods img {
+        width: 30px;
+    }
+}
