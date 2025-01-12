@@ -52,6 +52,7 @@ span#on {
     color: var(--cor-4);
 }
 
+/*Pesquisa*/
 div.search-bar {
     flex-direction: column;
     height: 100%;
@@ -74,6 +75,26 @@ div.search-bar {
     border: 2px solid #ff7f50;
 }
 
+.search-box {
+    position: relative;
+    display: inline-block;
+}
+
+.search-box i {
+    position: absolute;
+    left: 10px; /* Distância da borda esquerda */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999; /* Cor do ícone */
+}
+
+.search-box input {
+    padding: 10px 10px 10px 35px; /* Espaço à esquerda para o ícone */
+    border-radius: 4px;
+    width: 100%; /* Ajuste o tamanho como necessário */
+}
+
+/* Navbar */
 nav ul {
     display: flex;
     list-style: none;
@@ -97,28 +118,46 @@ nav ul li a:hover {
     color: rgb(31, 31, 31);
 }
 
-
-
-.user-actions a {
-
-    color: var(--cor-5);
-    margin-left: 15px;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: color 0.3s;
+/* Animações */
+nav ul li {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
 }
 
-.user-actions a:hover {
-    color: var(--cor-4);
+nav ul li:nth-child(1) {
+    animation-delay: 0.1s;
 }
 
-.user-actions i {
-    margin-right: 8px;
-    font-size: 18px;
-    vertical-align: middle;
+nav ul li:nth-child(2) {
+    animation-delay: 0.2s;
 }
 
-/* Navbar */
+nav ul li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+nav ul li:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+nav ul li:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+nav ul li:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*hamburguer*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -189,6 +228,27 @@ nav ul li a:hover {
     transform: translateY(0);
   }
 
+
+/*Ações do úsuario*/
+.user-actions a {
+
+    color: var(--cor-5);
+    margin-left: 15px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.user-actions a:hover {
+    color: var(--cor-4);
+}
+
+.user-actions i {
+    margin-right: 8px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
   
 
 .swiper {
@@ -238,65 +298,4 @@ footer {
 .social-links i {
     font-size: 25px;
     margin-right: 10px;
-}
-
-/* Animações */
-nav ul li {
-    opacity: 0;
-    animation: fadeIn 0.5s forwards;
-}
-
-nav ul li:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-nav ul li:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-nav ul li:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-nav ul li:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-nav ul li:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-nav ul li:nth-child(6) {
-    animation-delay: 0.6s;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-
-
-.search-box {
-    position: relative;
-    display: inline-block;
-}
-
-.search-box i {
-    position: absolute;
-    left: 10px; /* Distância da borda esquerda */
-    top: 50%;
-    transform: translateY(-50%);
-    color: #999; /* Cor do ícone */
-}
-
-.search-box input {
-    padding: 10px 10px 10px 35px; /* Espaço à esquerda para o ícone */
-    border-radius: 4px;
-    width: 100%; /* Ajuste o tamanho como necessário */
 }
