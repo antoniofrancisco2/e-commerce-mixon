@@ -45,7 +45,7 @@
     }
 
     div.user-actions {
-        background-color: rgba(255, 255, 255, 0.329);
+        background-color: rgba(255, 255, 255, 0.452);
         text-align: center;
         padding-top: 10px;
         width: 100%;
@@ -126,20 +126,12 @@
 
     div.user-actions {
         display: flex;
-        padding-left: 5px;
+        padding: 0px 20px 0px 50px;
         align-items: center;
     }
 
     .user-actions i {
         font-size: 15px;
-    }
-
-    div#sepr {
-        padding-left: 55px;
-    }
-
-    div#sepr a {
-        padding: 5px;
     }
 
     div.user-actions a {
