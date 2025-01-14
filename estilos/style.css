@@ -366,11 +366,13 @@ main {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
-  .card {
-    flex: 1 1 calc(50% - 10px); /* Ocupa 50% da largura com espaçamento */
-    box-sizing: border-box; /* Inclui padding e bordas no cálculo do tamanho */
-    padding: 10px;
-    text-align: center;
+  @media (max-width: 768px) { 
+    .card {
+      flex: 1 1 calc(50% - 10px); /* Ocupa 50% da largura com espaçamento */
+      box-sizing: border-box; /* Inclui padding e bordas no cálculo do tamanho */
+      padding: 10px;
+      text-align: center;
+    }
   }
   
   .card:hover {
