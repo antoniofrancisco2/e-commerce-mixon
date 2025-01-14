@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="estilos/mediaquiry.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="#">Mix<span id="on">On</span></a>
-        </div>
-        <div class="search-bar">
-          <div class="search-box">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="O que você procura?" />
+    <header id="secao-1">
+      <div class="logo">
+          <a href="#">Mix<span id="on">On</span></a>
+      </div>
+      <div class="search-bar">
+        <div class="search-box">
+           <i class="fas fa-search"></i>
+           <input type="text" placeholder="O que você procura?" />
         </div>
 
             <nav class="navbar">
@@ -30,27 +30,26 @@
                 <span></span>
               </div>
                 <ul class="menu" id="menu">
-    <li><a href="/roupas"><i class="fas fa-tshirt"></i> Roupas</a></li>
-    <li><a href="/eletronicos"><i class="fas fa-tv"></i> Eletrônicos</a></li>
-    <li><a href="/beleza"><i class="fas fa-heart"></i> Beleza e Cuidados</a></li>
-    <li><a href="/esportes"><i class="fas fa-futbol"></i> Esportes e Lazer</a></li>
-    <li><a href="/casa"><i class="fas fa-couch"></i> Casa e Decoração</a></li>
-    <li><a href="/ofertas"><i class="fas fa-tags"></i> Ofertas</a></li>
-</ul>
+                  <li><a href="/roupas"><i class="fas fa-tshirt"></i> Roupas</a></li>
+                  <li><a href="/eletronicos"><i class="fas fa-tv"></i> Eletrônicos</a></li>
+                  <li><a href="/beleza"><i class="fas fa-heart"></i> Beleza e Cuidados</a></li>
+                  <li><a href="/esportes"><i class="fas fa-futbol"></i> Esportes e Lazer</a></li>
+                  <li><a href="/casa"><i class="fas fa-couch"></i> Casa e Decoração</a></li>
+                  <li><a href="/ofertas"><i class="fas fa-tags"></i> Ofertas</a></li>
+                </ul>
             </nav>
-        </div>
+      </div>
         
 
         <div class="user-actions">
             <a href="/cart"><i class="fas fa-shopping-cart"></i>Carrinho (0)</a>
-              <a href="/login"><i class="fas fa-user"></i>Entrar</a>
-              <a href="/register">Cadastrar</a>
+            <a href="/login"><i class="fas fa-user"></i>Entrar<a href="https://www.mercadolivre.com.br/"><span style="margin: 0px;">Cadastrar</span></a></a>
+              <!--<a href="/register">Cadastrar</a> -->
         </div>
     </header>
 
-
-
-    <div class="swiper">
+    <main id="secao-2">
+      <div class="swiper">
         <!-- Contêiner principal -->
         <div class="swiper-wrapper">
           <!-- Cada slide -->
@@ -63,14 +62,100 @@
           <div class="swiper-slide">
             <img src="img/WhatsApp-003.jpeg" alt="Promoção 3" />
           </div>
-        </div>
-      
-        <!-- Botões de navegação -->
-        
+        </div>  
       
         <!-- Paginação (opcional) -->
         <div class="swiper-pagination"></div>
       </div>
+      <!--
+      <div class="horizontal-scroll-container">
+        <!-- Botão de navegação à esquerda  
+        <button class="scroll-button left-button" onclick="scrollLeft()">&#8249;</button>
+      
+        <!-- Container de itens com rolagem lateral 
+        <div class="scroll-content">
+          <div class="scroll-item">Item 1</div>
+          <div class="scroll-item">Item 2</div>
+          <div class="scroll-item">Item 3</div>
+          <div class="scroll-item">Item 4</div>
+          <div class="scroll-item">Item 5</div>
+          <div class="scroll-item">Item 6</div>
+          <div class="scroll-item">Item 7</div>
+          <div class="scroll-item">Item 8</div>
+          <div class="scroll-item">Item 9</div>
+        </div>
+      
+        <!-- Botão de navegação à direita 
+        <button class="scroll-button right-button" onclick="scrollRight()">&#8250;</button>
+      </div> -->
+
+      <!--Cards vendas-->
+      <div class="cards-container">
+        <!-- Repetir este bloco para 10 cards -->
+        <div class="card">
+          <img src="product-image.jpg" alt="Produto" class="product-image">
+          <h2 class="product-title">Nome do Produto</h2>
+          <p class="product-price">R$ 99,99</p>
+          <button class="buy-button">Comprar</button>
+        </div>
+        <div class="card">
+            <img src="product-image.jpg" alt="Produto" class="product-image">
+            <h2 class="product-title">Nome do Produto</h2>
+            <p class="product-price">R$ 99,99</p>
+            <button class="buy-button">Comprar</button>
+          </div>
+          <div class="card">
+            <img src="product-image.jpg" alt="Produto" class="product-image">
+            <h2 class="product-title">Nome do Produto</h2>
+            <p class="product-price">R$ 99,99</p>
+            <button class="buy-button">Comprar</button>
+          </div>
+          <div class="card">
+            <img src="product-image.jpg" alt="Produto" class="product-image">
+            <h2 class="product-title">Nome do Produto</h2>
+            <p class="product-price">R$ 99,99</p>
+            <button class="buy-button">Comprar</button>
+          </div>
+          <div class="card">
+            <img src="product-image.jpg" alt="Produto" class="product-image">
+            <h2 class="product-title">Nome do Produto</h2>
+            <p class="product-price">R$ 99,99</p>
+            <button class="buy-button">Comprar</button>
+          </div>
+          <div class="card">
+            <img src="product-image.jpg" alt="Produto" class="product-image">
+            <h2 class="product-title">Nome do Produto</h2>
+            <p class="product-price">R$ 99,99</p>
+            <button class="buy-button">Comprar</button>
+          </div>
+          <div class="card">
+            <img src="product-image.jpg" alt="Produto" class="product-image">
+            <h2 class="product-title">Nome do Produto</h2>
+            <p class="product-price">R$ 99,99</p>
+            <button class="buy-button">Comprar</button>
+          </div>
+          <div class="card">
+            <img src="product-image.jpg" alt="Produto" class="product-image">
+            <h2 class="product-title">Nome do Produto</h2>
+            <p class="product-price">R$ 99,99</p>
+            <button class="buy-button">Comprar</button>
+          </div>
+          <div class="card">
+            <img src="product-image.jpg" alt="Produto" class="product-image">
+            <h2 class="product-title">Nome do Produto</h2>
+            <p class="product-price">R$ 99,99</p>
+            <button class="buy-button">Comprar</button>
+          </div>
+          <div class="card">
+            <img src="product-image.jpg" alt="Produto" class="product-image">
+            <h2 class="product-title">Nome do Produto</h2>
+            <p class="product-price">R$ 99,99</p>
+            <button class="buy-button">Comprar</button>
+          </div>
+      </div>
+
+
+    </main>
 
 
     
@@ -87,17 +172,19 @@
             <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
         </div>
         <div class="payment-methods">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/150px-Mastercard_2019_logo.svg.png" alt="Mastercard">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/BoletoBancario.png/220px-BoletoBancario.png" alt="Boleto">
+            <img src="https://ae01.alicdn.com/kf/S4235fb14b1774ed2a85494fbef85c02d9/216x144.png" alt="Visa">
+            <img src="https://ae01.alicdn.com/kf/S7b20ce778ba44e60a062008c35e98b57M/216x144.png" alt="Mastercard">
+            <img src="https://ae01.alicdn.com/kf/S8df1a1d99c8049d1b1a86c9a144719b6W/216x144.png" alt="PayPal">
+            <img src="https://ae01.alicdn.com/kf/Sc4ba4621f16046638aae337cdbb6ba09Z/216x144.png" alt="Boleto">
+            <img src="https://ae01.alicdn.com/kf/S173da9e53a234dcb9795cebd1856c4d7J/216x144.png" alt="Google pay">
+            <img src="https://ae01.alicdn.com/kf/S72c3d95027504c8ca0838ab38d5b5820R/216x144.png" alt="Pix">
         </div>
     </footer>
 
     
 
-      <script>
-
-        const hamburger = document.getElementById('hamburger');
+  <script>
+    const hamburger = document.getElementById('hamburger');
         const menu = document.getElementById('menu');
 
         hamburger.addEventListener('click', () => {
@@ -138,6 +225,26 @@
             },
           },
         });
-      </script>
+
+
+
+        function scrollLeft() {
+  const container = document.querySelector('.scroll-content');
+  container.scrollBy({
+    left: -200,  // Altere esse valor conforme necessário para o efeito desejado
+    behavior: 'smooth'
+  });
+}
+
+function scrollRight() {
+  const container = document.querySelector('.scroll-content');
+  container.scrollBy({
+    left: 200,  // Altere esse valor conforme necessário para o efeito desejado
+    behavior: 'smooth'
+  });
+}
+
+
+  </script>
 </body>
 </html>
