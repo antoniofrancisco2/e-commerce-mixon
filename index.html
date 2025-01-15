@@ -67,13 +67,14 @@
         <!-- Paginação (opcional) -->
         <div class="swiper-pagination"></div>
       </div>
-      <!--
-      <div class="horizontal-scroll-container">
-        <!-- Botão de navegação à esquerda  
-        <button class="scroll-button left-button" onclick="scrollLeft()">&#8249;</button>
+
+      <div class="horizontalscrollcontainer">
+        <!-- Botão de navegação à esquerda -->
+        <button class="scroll-button left-button">&#8249;</button>
       
-        <!-- Container de itens com rolagem lateral 
+        <!-- Container de itens com rolagem lateral -->
         <div class="scroll-content">
+          <!-- Itens repetidos -->
           <div class="scroll-item">Item 1</div>
           <div class="scroll-item">Item 2</div>
           <div class="scroll-item">Item 3</div>
@@ -85,9 +86,9 @@
           <div class="scroll-item">Item 9</div>
         </div>
       
-        <!-- Botão de navegação à direita 
-        <button class="scroll-button right-button" onclick="scrollRight()">&#8250;</button>
-      </div> -->
+        <!-- Botão de navegação à direita -->
+        <button class="scroll-button right-button">&#8250;</button>
+      </div>
 
       <!--Cards vendas-->
       <div class="cards-container">
@@ -228,21 +229,20 @@
 
 
 
-        function scrollLeft() {
-  const container = document.querySelector('.scroll-content');
-  container.scrollBy({
-    left: -200,  // Altere esse valor conforme necessário para o efeito desejado
-    behavior: 'smooth'
-  });
-}
+            const horizontalscrollcontainer = document.querySelector('.scroll-content');
+          const leftButton = document.querySelector('.left-button');
+          const rightButton = document.querySelector('.right-button');
 
-function scrollRight() {
-  const container = document.querySelector('.scroll-content');
-  container.scrollBy({
-    left: 200,  // Altere esse valor conforme necessário para o efeito desejado
-    behavior: 'smooth'
-  });
-}
+          // Define o valor de rolagem (em pixels)
+          const scrollAmount = 200;
+
+          leftButton.addEventListener('click', () => {
+            horizontalscrollcontainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+          });
+
+          rightButton.addEventListener('click', () => {
+            horizontalscrollcontainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+          });
 
 
   </script>

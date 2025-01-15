@@ -37,8 +37,14 @@
     }
 
     .menu {
-        gap: 1rem;
+        gap: 0.2rem;
       }
+
+      nav ul i {
+        padding: 10px;
+      }
+
+      
 
     .menu.open {
       display: flex;
@@ -97,6 +103,12 @@
         margin-bottom: 15px;
     }
 
+    .search-bar input:focus {
+        width: 350px;
+        outline: none;
+        border: 2px solid var(--cor-4);
+    }
+
     nav ul li {
         margin: 0 10px;
     }
@@ -128,7 +140,7 @@
 
     nav > ul > li > a {
         padding-right: 10px;
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
 }
  
@@ -144,16 +156,13 @@
         margin-bottom: 15px;
     }
 
-    nav ul {
-        align-items: center;
-    }
-
     nav ul li {
         margin: 10px 0;
     }
 
-    
-    
+    nav ul li a {
+        font-size: 0.9rem;
+      }
 
     .user-actions i {
         font-size: 15px;

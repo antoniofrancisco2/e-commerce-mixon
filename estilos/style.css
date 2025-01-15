@@ -64,14 +64,14 @@ div.search-bar {
     border: none;
     border-radius: 4px;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     transition: width 0.3s ease;
 }
 
 .search-bar input:focus {
-    width: 350px;
-    outline: none;
-    border: 2px solid #ff7f50;
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--cor-4);
 }
 
 .search-box {
@@ -109,7 +109,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: var(--cor-7);
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     transition: color 0.3s;
 }
 
@@ -171,7 +171,7 @@ nav ul li:nth-child(6) {
   .menu a {
     text-decoration: none;
     color: black;
-    padding: 0rem 0rem;
+    padding: 0rem 1rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
   }
@@ -267,25 +267,22 @@ main {
     background-color: #ebebeb;
     
 }
-/**
-.horizontal-scroll-container {
+.horizontalscrollcontainer {
     display: flex;
     align-items: center;
     position: relative;
     margin: 20px auto;
-    height: 100%;
     max-width: 100%;
     overflow: hidden;
-    padding: 10px 0;
+    padding: 20px;
   }
   
   .scroll-content {
     display: flex;
     gap: 10px;
-    overflow: scroll;
     overflow-x: auto;
     scroll-behavior: smooth;
-    width: calc(100% - 80px); /* Espaço entre botões *
+    width: calc(117% - 80px); /* Espaço entre botões */
   }
   
   .scroll-item {
@@ -300,11 +297,11 @@ main {
     font-size: 16px;
     color: #333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0; /* Impede o redimensionamento dos itens *
+    flex-shrink: 0; /* Impede o redimensionamento dos itens */
   }
   
   .scroll-content::-webkit-scrollbar {
-    display: none; /* Esconde a barra de rolagem *
+    display: none; /* Esconde a barra de rolagem */
   }
   
   .scroll-button {
@@ -329,11 +326,33 @@ main {
   }
   
   .left-button {
-    left: 10px;
+    left: -12px;
   }
   
   .right-button {
-    right: 10px;
+    right: -12px;
+  }
+  
+  /* Degradê sobre as bordas */
+  .horizontalscrollcontainer::before,
+  .horizontalscrollcontainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    pointer-events: none; /* Permite interação com os itens e botões abaixo */
+    z-index: 5;
+  }
+  
+  .horizontalscrollcontainer::before {
+    left: 0;
+    background: linear-gradient(to right, #ebebeb, #ebebeb2d);
+  }
+  
+  .horizontalscrollcontainer::after {
+    right: 0;
+    background: linear-gradient(to left, #ebebeb, #ebebeb2d);
   }
   
   @media (max-width: 768px) {
@@ -341,7 +360,7 @@ main {
       min-width: 120px;
       height: 150px;
     }
-  } **/
+  } 
 
 
 
