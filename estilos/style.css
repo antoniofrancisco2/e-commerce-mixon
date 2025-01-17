@@ -284,6 +284,7 @@ main {
     scroll-behavior: smooth;
     width: calc(117% - 80px); /* Espaço entre botões */
   }
+
   
   .scroll-item {
     min-width: 150px;
@@ -298,6 +299,10 @@ main {
     color: #333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex-shrink: 0; /* Impede o redimensionamento dos itens */
+  }
+
+  .scroll-item img {
+    height: 40%;
   }
   
   .scroll-content::-webkit-scrollbar {
@@ -346,7 +351,7 @@ main {
   }
   
   .horizontalscrollcontainer::before {
-    left: 0;
+    left: -60px;
     background: linear-gradient(to right, #ebebeb, #ebebeb2d);
   }
   
