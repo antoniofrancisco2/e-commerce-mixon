@@ -17,6 +17,7 @@
   }
 
 body {
+    background-color: #ebebeb;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -250,18 +251,43 @@ nav ul li:nth-child(6) {
 
   
 
-.swiper {
-    width: 90%; /* O carrossel ocupa toda a largura do contêiner */
-    height: 100%; /* Altura ajustada automaticamente */
-  }
+/* Estilos gerais */
+div.swiper {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 95%;
+  height: 50%;
+}
 
-  .swiper-slide img {
-    width: 100%; /* As imagens se ajustam à largura do slide */
-    height: auto; /* Mantém a proporção original */
-    display: block; /* Evita gaps causados por elementos inline */
-    object-fit: cover; /* Corta o excesso, se necessário */
-  }
+.swiper-slide img {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  display: block;
+  object-fit: cover;
+}
 
+/* Exibir apenas imagens de celular em telas pequenas */
+@media (max-width: 768px) {
+  img.desktop-image {
+      display: none; /* Esconde imagens de desktop */
+  }
+  img.mobile-image {
+      display: block; /* Mostra imagens de celular */
+  }
+}
+
+/* Exibir apenas imagens de desktop em telas maiores */
+@media (min-width: 768px) {
+  img.mobile-image {
+      display: none; /* Esconde imagens de celular */
+  }
+  img.desktop-image {
+      display: block; /* Mostra imagens de desktop */
+  }
+}
 
 main {
     background-color: #ebebeb;
@@ -394,9 +420,6 @@ main {
   }
 
   @media (max-width: 768px) { 
-    .cards-container {
-    }
-
     .card {
       flex: 1 1 calc(50% - 10px); /* Ocupa 50% da largura com espaçamento */
       box-sizing: border-box; /* Inclui padding e bordas no cálculo do tamanho */
