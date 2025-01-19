@@ -305,19 +305,25 @@ main {
   
   .scroll-content {
     display: flex;
-    gap: 10px;
+    gap: 25px;
+    padding-left: 25px;
     overflow-x: auto;
     scroll-behavior: smooth;
     width: calc(117% - 80px); /* Espaço entre botões */
   }
 
+  div.caix p {
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
   
   .scroll-item {
-    min-width: 150px;
-    height: 200px;
+    min-width: 70px;
+    height: 70px;
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -328,7 +334,7 @@ main {
   }
 
   .scroll-item img {
-    height: 40%;
+    height: 100%;
   }
   
   .scroll-content::-webkit-scrollbar {
@@ -386,12 +392,12 @@ main {
     background: linear-gradient(to left, #ebebeb, #ebebeb2d);
   }
   
-  @media (max-width: 768px) {
+  /**@media (max-width: 768px) {
     .scroll-item {
       min-width: 120px;
       height: 150px;
     }
-  } 
+  } **/
 
 section.categorias {
   background-color: var(--cor-6);
