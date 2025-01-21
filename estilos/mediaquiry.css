@@ -19,99 +19,8 @@
     }
   }
 
-  /* Show hamburger only on mobile */
-  @media (max-width: 768px) {
-    /**div.search-bar {
-        flex-direction: row;
-        display: flex;
-    }
-
-    .hamburger {
-      display: flex;
-      margin-top: 0px;
-    }
-
-    .menu {
-      display: none;
-    }
-
-    .menu {
-        gap: 0.2rem;
-      }
-
-      nav ul i {
-        padding: 10px;
-      }
-
-      
-
-    .menu.open {
-      display: flex;
-    }
-
-    div.user-actions {
-        
-    }
-
-
-    .user-actions {
-        display: flex;
-        justify-content: center; /* Centraliza os links horizontalmente 
-        align-items: center; /* Alinha os itens verticalmente 
-        gap: 20px; /* Espaçamento entre os links 
-        margin: 0;
-        padding: 10px;
-    }
-    
-    .user-actions a {
-        text-decoration: none; /* Remove o sublinhado dos links 
-        color: #333; /* Cor do texto *
-        font-size: 16px; /* Tamanho da fonte *
-        display: flex; /* Flex para o ícone e texto no mesmo nível *
-        align-items: center; /* Centraliza o ícone verticalmente *
-    }
-    
-    .user-actions a i {
-        margin-right: 8px; /* Espaço entre o ícone e o texto *
-        font-size: 18px; /* Tamanho do ícone *
-        color: #666; /* Cor do ícone *
-    }
-    
-    .user-actions a:hover {
-        color: #007bff; /* Cor ao passar o mouse *
-    }
-   **/
-  }
-
   /* Responsividade */
  @media (max-width: 768px) {
-    /**header {
-        padding: 15px 0px 0px 0px;
-    }
-
-    .logo a {
-        font-size: 1.8rem;
-    }
-
-    .search-bar input {
-        width: 250px;
-        font-size: 0.9rem;
-        margin-bottom: 15px;
-    }
-
-    .search-bar input:focus {
-        width: 350px;
-        outline: none;
-        border: 2px solid var(--cor-4);
-    }
-
-    nav ul li {
-        margin: 0 10px;
-    }
-
-    div.user-actions a {
-        font-size: 0.9rem;
-    }**/
 
     footer {
         padding: 15px;
@@ -134,41 +43,10 @@
         width: 35px;
     }
 
-    /**nav > ul > li > a {
-        padding-right: 10px;
-        font-size: 0.8em;
-    }**/
 }
  
 
 @media (max-width: 480px) {
-    /**.logo a {
-        font-size: 1.6rem;
-    }
-
-    .search-bar input {
-        width: 200px;
-        font-size: 0.8rem;
-        margin-bottom: 15px;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 0.9rem;
-      }
-
-    .user-actions i {
-        font-size: 15px;
-    }
-
-    div.user-actions a {
-        margin: 10px 0;
-        font-size: 0.9rem;
-    }**/
-
     footer {
         padding: 10px;
         text-align: center;
