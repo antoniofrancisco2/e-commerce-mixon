@@ -18,7 +18,13 @@
         <div class="logo">Minha Loja</div>
         <div class="icons">
           <i class="fas fa-shopping-cart"></i>
-          <i class="fas fa-user"></i>
+          <div class="profile">
+            <i class="fas fa-user"></i>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">Entrar</a>
+              <a href="#" class="dropdown-item">Cadastrar</a>
+            </div>
+          </div>
         </div>
       </nav>
       <div class="search-bar">
@@ -211,7 +217,32 @@
     
 
   <script>
-    
+      // Selecionar o ícone de perfil e o menu suspenso
+        const profileIcon = document.querySelector('.profile');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        // Mostrar o menu ao passar o mouse sobre o ícone de perfil
+        profileIcon.addEventListener('mouseenter', () => {
+          dropdownMenu.style.display = 'flex';
+        });
+
+        // Esconder o menu ao retirar o mouse, mas somente se o mouse não estiver sobre o menu
+        profileIcon.addEventListener('mouseleave', () => {
+          if (!dropdownMenu.matches(':hover')) {
+            dropdownMenu.style.display = 'none';
+          }
+        });
+
+        // Mostrar o menu novamente quando o mouse passar sobre o menu suspenso
+        dropdownMenu.addEventListener('mouseenter', () => {
+          dropdownMenu.style.display = 'flex';
+        });
+
+        // Esconder o menu quando o mouse sair do menu
+        dropdownMenu.addEventListener('mouseleave', () => {
+          dropdownMenu.style.display = 'none';
+        });
+
 
         const swiper = new Swiper('.swiper', {
           loop: true, // Faz o carrossel rodar em loop
