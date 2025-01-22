@@ -198,8 +198,8 @@ main {
   }
   
   .scroll-item {
-    min-width: 70px;
-    height: 70px;
+    min-width: 60px;
+    height: 60px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 100%;
