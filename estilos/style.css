@@ -1,11 +1,13 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
 :root {
-    --cor-1: #ffe600;
-    --cor-2: #1f4e96;
-    --cor-3: #73b06f;
-    --cor-4: #3483fa;
-    --cor-5: #405059;
+    --cor-1: #e0d7d0;
+    --cor-2: #8c8481;
+    --cor-3: #2c2a2c;
+    --cor-4: #755849;
+    --cor-5: #aa7a5e;
     --cor-6: white;
     --cor-7: black;
 }
@@ -28,6 +30,10 @@ header {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -40,16 +46,21 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #007BFF;
+
   color: white;
 }
 
 .navbar .logo {
-  font-size: 24px;
+  font-family: "Dancing Script", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 34px;
+  color: var(--cor-3);
   font-weight: bold;
 }
 
 .navbar .icons {
+  color: var(--cor-4);
   display: flex;
   align-items: center;
 }
@@ -114,7 +125,7 @@ body {
 
 .search-bar button {
   padding: 10px;
-  background-color: #007BFF;
+  background-color: var(--cor-4);
   color: white;
   border: none;
   border-radius: 0 5px 5px 0;
@@ -126,7 +137,7 @@ body {
 }
 
 .search-bar button:hover {
-  background-color: #0056b3;
+  background-color: var(--cor-5);
 }
 
 /* Estilos gerais */
