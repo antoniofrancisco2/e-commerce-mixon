@@ -3,10 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 :root {
-    --cor-1: #e0d7d0;
-    --cor-2: #8c8481;
-    --cor-3: #2c2a2c;
-    --cor-4: #755849;
+    --cor-1: #ededed;
+    --cor-2: #797979;
+    --cor-3: #1f2029;
+    --cor-4: #704f38;
     --cor-5: #aa7a5e;
     --cor-6: white;
     --cor-7: black;
@@ -19,7 +19,7 @@
   }
 
 body {
-    background-color: #ebebeb;
+    background-color: #ededed;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -159,7 +159,7 @@ div.swiper {
 
 /* Cor dos pontos de paginação ativos */
 span.swiper-pagination-bullet-active {
-  background-color: #755849; /* Cor diferente para o ponto ativo */
+  background-color: var(--cor-4); /* Cor diferente para o ponto ativo */
   opacity: 1; /* Torna o ponto ativo opaco */
 }
 
@@ -184,7 +184,7 @@ span.swiper-pagination-bullet-active {
 }
 
 main {
-    background-color: #ebebeb;
+    background-color: var(--cor-1);
     
 }
 .horizontalscrollcontainer {
@@ -253,7 +253,7 @@ main {
   }
 
   h1.horizontal {
-    color: #2c2a2c;
+    color: var(--cor-3);
     padding-top: 20px;
     padding-left: 30px;
     font-size: 1.5rem;
@@ -317,7 +317,7 @@ section.categorias h1 {
 
 div.linha {
   margin: auto;
-  background-color: #00a650;
+  background-color: var(--cor-4);
   margin-bottom: -12px;
   border-radius: 0px 0px 10px 10px;
   height: 5px;

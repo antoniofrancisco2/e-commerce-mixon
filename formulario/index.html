@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <!-- Contêiner do formulário -->
+  <div class="form-container">
+        <h2 class="form-title">Criar Conta</h2>
+        <p class="form-subtitle">
+        Preencha suas informações abaixo ou registre-se com sua conta social.
+        </p>
+        <form action="../index.html">
+        <!-- Campo Nome -->
+        <div class="form-group">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" id="name" placeholder="Nome/Sobrenome" class="form-input" required/>
+        </div>
+
+        <!-- Campo Email -->
+        <div class="form-group mb-4">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" placeholder="exemplo@gmail.com" class="form-input" required />
+        </div>
+
+        <!-- Campo Senha -->
+<div class="form-group">
+    <label for="password" class="form-label">Senha</label>
+    <div class="password-container">
+        <input type="password" id="password" placeholder="********" class="form-input" required 
+               minlength="8" 
+               pattern="^(?=(.*[A-Z]){1,})(?=(.*\d){1,})(?=(.*[!@#$%^&*()_+={}\[\]:;,.?~`-]){1}).+$" />
+        <button type="button" class="toggle-password">
+            <i class="fas fa-eye"></i>
+        </button>
+    </div>
+    
+    <ul id="password-requirements" class="requirements-list">
+        <li id="uppercase" class="requirement">Pelo menos uma letra maiúscula</li>
+        <li id="number" class="requirement">Pelo menos um número</li>
+        <li id="special" class="requirement">Pelo menos um caractere especial</li>
+    </ul>
+    
+   
+</div>
+
+
+
+
+
+
+        <!-- Termos e condições -->
+        <div class="form-group">
+            <input type="checkbox" id="terms" class="form-checkbox" required />
+            <label for="terms" class="form-checkbox-label">
+            Concordo com 
+            <a href="#">Termos e Condições</a>
+            </label>
+        </div>
+
+        <!-- Botão de inscrição -->
+            <button type="submit" class="form-submit-btn">
+                Inscrever-se
+            </button>
+        </form>
+
+        <!-- Alternativas de login social -->
+        <div class="social-login">
+            <span class="text-gray-500">Ou inscreva-se com</span>
+        </div>
+        <div class="social-buttons">
+            <!-- Botão Apple -->
+            <button class="social-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple"/>
+            </button>
+            <!-- Botão Google -->
+            <button class="social-btn">
+                <img src="https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg" alt="Google"/>
+            </button>
+            <!-- Botão Facebook -->
+            <button class="social-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+            </button>
+        </div>
+
+        <!-- Link para login -->
+        <div class="login-link text-center mt-4">
+            <span class="text-sm text-gray-500">
+                Já tem uma conta? 
+                <a href="#" class="text-blue-500 hover:underline">Entrar</a>
+            </span>
+        </div>
+  </div>
+
+  <script>
+    const togglePassword = document.querySelector('.toggle-password');
+    const passwordField = document.getElementById('password');
+    
+    togglePassword.addEventListener('click', function () {
+        // Alterna entre tipo "password" e "text"
+        const type = passwordField.type === 'password' ? 'text' : 'password';
+        passwordField.type = type;
+        
+        // Alterna os ícones
+        this.innerHTML = type === 'password' 
+            ? '<i class="fas fa-eye"></i>' // Ícone de olho fechado
+            : '<i class="fas fa-eye-slash"></i>'; // Ícone de olho aberto
+    });
+
+    
+    const passwordError = document.getElementById('password-error');
+    
+    passwordField.addEventListener('input', function () {
+        // Expressão regular para validar a senha
+        const regex = /^(?=(.*[A-Z]){1,})(?=(.*\d){1,})(?=(.*[!@#$%^&*()_+={}\[\]:;,.?~`-]){1}).+$/;
+        
+        if (!regex.test(passwordField.value)) {
+            passwordError.style.display = 'block'; // Exibe a mensagem de erro
+        } else {
+            passwordError.style.display = 'none'; // Oculta a mensagem de erro
+        }
+    });
+
+
+    const passwordRequirements = document.getElementById('password-requirements');
+    const uppercaseRequirement = document.getElementById('uppercase');
+    const numberRequirement = document.getElementById('number');
+    const specialRequirement = document.getElementById('special');
+    
+    passwordField.addEventListener('input', function () {
+        const passwordValue = passwordField.value;
+        
+        // Validando os requisitos
+        const hasUppercase = /[A-Z]/.test(passwordValue);
+        const hasNumber = /\d/.test(passwordValue);
+        const hasSpecialChar = /[!@#$%^&*()_+={}\[\]:;,.?~`-]/.test(passwordValue);
+        
+        // Atualizando os requisitos
+        if (hasUppercase) {
+            uppercaseRequirement.classList.add('valid');
+            uppercaseRequirement.classList.remove('invalid');
+        } else {
+            uppercaseRequirement.classList.add('invalid');
+            uppercaseRequirement.classList.remove('valid');
+        }
+        
+        if (hasNumber) {
+            numberRequirement.classList.add('valid');
+            numberRequirement.classList.remove('invalid');
+        } else {
+            numberRequirement.classList.add('invalid');
+            numberRequirement.classList.remove('valid');
+        }
+        
+        if (hasSpecialChar) {
+            specialRequirement.classList.add('valid');
+            specialRequirement.classList.remove('invalid');
+        } else {
+            specialRequirement.classList.add('invalid');
+            specialRequirement.classList.remove('valid');
+        }
+        
+        // Verificando se a senha atende a todos os requisitos
+        if (hasUppercase && hasNumber && hasSpecialChar) {
+            passwordError.style.display = 'none'; // Oculta a mensagem de erro
+        } else {
+            passwordError.style.display = 'block'; // Exibe a mensagem de erro
+        }
+    });
+</script>
+
+</body>
+</html>
