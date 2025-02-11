@@ -400,6 +400,7 @@ div.linha {
   .cards {
     display: grid;
     padding: 20px;
+    margin: auto;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     width: 100%;
@@ -424,9 +425,20 @@ div.linha {
     scale: 1.01;
 }
 
+.sabermais a{
+  display: flex;
+  color: var(--cor-2);
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline
+}
+
 .card img {
-    width: 80%;
-    height: auto;
+    width: 90%;
+    height: 75%;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
