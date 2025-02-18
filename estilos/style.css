@@ -586,7 +586,7 @@ p {
 
 .price-shoop {
   display: flex;
-  font-size: 20px;
+  font-size: 1rem;
   color: var(--cor-3);
   font-weight: bold;
 }
@@ -611,11 +611,15 @@ p {
   .container-cards {
       grid-template-columns: repeat(2, 1fr); /* 2 colunas flexíveis em telas menores */
   }
+
+  h2 {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 480px) {
   .container-cards {
-      grid-template-columns: 1fr; /* 1 coluna para telas muito pequenas */
+      grid-template-columns: 2, 1fr; /* 1 coluna para telas muito pequenas */
   }
 }
 
