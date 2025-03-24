@@ -409,8 +409,9 @@ div.linha {
 
 .card {
     background-color: #fff;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     padding: 0px;
     display: flex;
     flex-direction: column;
@@ -440,7 +441,7 @@ div.linha {
     width: 100%;
     height: 72%;
     object-fit: cover;
-    border-radius: 10px;
+    
     margin-bottom: 15px;
 }
 
@@ -460,15 +461,6 @@ div.linha {
     color: gray;
 }
 
-.card-footer {
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0px;
-}
-
 .price {
     font-size: 16px;
     font-weight: bold;
@@ -476,8 +468,9 @@ div.linha {
 }
 
 .btn-primary {
-    background-color: #5d5df5;
+    background-color: var(--cor-4);
     color: #fff;
+    margin-top: 20px;
     padding: 10px 15px;
     border: none;
     border-radius: 25px;
@@ -487,7 +480,7 @@ div.linha {
 }
 
 .btn-primary:hover {
-    background-color: #4a4af5;
+    background-color: var(--cor-5);
 }
 
 @media (max-width: 768px) {
